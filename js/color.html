@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="color.css">
+</head>
+<body>
+    <div id="screen"></div>
+
+    <button onclick="display('red')">red</button>
+    <button onclick="display('green')">green</button>
+    <button onclick="display('blue')">blue</button>
+    <button onclick="display('yellow')">yellow</button>
+    <button onclick="display('purple')">purple</button>
+    <button onclick="display('gray')">gray</button>
+
+    <script>
+        function display(col){
+            document.getElementById("screen").style.background=col
+        }
+    </script>
+</body>
+</html>

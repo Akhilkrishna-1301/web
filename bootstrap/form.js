@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $('#signup').validate({
+        rules:{
+            name:{
+                required:true,
+                minlength:4
+            },
+            pass:{
+                required:true,
+                minlength:6
+            }
+        }
+    })
+})

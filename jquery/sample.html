@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <button onclick="touch()" id="btn">click me</button>
+    <div style="height: 300px;width:300px;background: red;" id="box">
+
+    </div>
+    <input type="text" id="inp">
+    <label style="display: none;" id="error" for="">Enter minimum 4 characters</label>
+    <input type="text">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        //jquery code
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                //alert("button clicked")
+                //$("#box").toggle(3000)
+                $("#box").fadeToggle(3000)
+            })
+
+            $("#btn").mouseenter(function(){
+                $(this).css({"background":"red"})
+            })
+
+            $("#btn").mouseleave(function(){
+                $(this).css({"background":"white"})
+            })
+            $("#inp").blur(function(){
+                var text=$(this).val()
+                if(text.length<4){
+                    //alert("enter minimum characters")
+                    $("#error").show()
+                }else{
+                    $("#error").hide()
+                }
+            })
+        })
+
+        //javascript code for alert
+        /*function touch(){
+            document.getElementById("btn").click(alert("button clicked"))
+        }*/
+
+
+
+        
+    </script>
+</body>
+</html>
