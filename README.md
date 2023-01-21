@@ -7,3 +7,4 @@ Languages
 * HTML
 * CSS
 * BootStrap
+* Jquery
